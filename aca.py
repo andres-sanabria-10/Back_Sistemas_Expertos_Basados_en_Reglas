@@ -1,5 +1,7 @@
 from experta import KnowledgeEngine, Rule, Fact, P
 from flask import Flask, request, jsonify
+from flask_cors import CORS  # Importar CORS
+
 # Definir la base de conocimiento
 class SistemaExperto(KnowledgeEngine):
     # Regla 1: Condiciones con predicados (P)
@@ -349,6 +351,7 @@ class SistemaExperto(KnowledgeEngine):
         self.declare(Fact(cultivos_recomendados=cultivos))
 # Crear la aplicación Flask
 app = Flask(__name__)
+CORS(app)  # Habilitar CORS para todas las rutas
 
 @app.route('/api/recomendacion', methods=['POST'])
 def obtener_recomendacion():
