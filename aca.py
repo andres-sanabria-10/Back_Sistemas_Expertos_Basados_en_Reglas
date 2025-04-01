@@ -10,7 +10,8 @@ class SistemaExperto(KnowledgeEngine):
         Fact(piso_termico="Pt1"),  # Condición 2: Piso térmico cálido
         Fact(tipo_suelo="Ts4"),  # Condición 3: Tipo de suelo franco
         Fact(precipitacion_anual=P(lambda x: 500 <= x <= 4000)),  # Condición 4: Precipitación entre 500 y 4000 mm
-        Fact(proposito_cultivo="Pc1")  # Condición 5: Propósito consumo personal
+        Fact(proposito_cultivo="Pc1"), # Condición 5: Propósito consumo personal
+        Fact(temperatura_prom="Tp1")  # Condición 6: Temperatura promedio
     )
     def recomendacion_caribe(self):
         print("¡La regla 1 se ha activado!")
@@ -28,7 +29,9 @@ class SistemaExperto(KnowledgeEngine):
         Fact(piso_termico="Pt1"),  # Condición 2: Piso térmico cálido
         Fact(tipo_suelo="Ts1"),  # Condición 3: Tipo de suelo arcilloso
         Fact(precipitacion_anual=P(lambda x: 500 <= x <= 4000)),  # Condición 4: Precipitación entre 500 y 4000 mm
-        Fact(proposito_cultivo="Pc3")  # Condición 5: Propósito exportación
+        Fact(proposito_cultivo="Pc3"),  # Condición 5: Propósito exportación
+        Fact(temperatura_prom="Tp1")  # Condición 6: Temperatura promedio
+    
     )
     def recomendacion_exportacion(self):
         print("¡La regla 2 se ha activado!")
@@ -45,7 +48,9 @@ class SistemaExperto(KnowledgeEngine):
         Fact(piso_termico="Pt1"),  # Condición 2: Piso térmico cálido
         Fact(tipo_suelo="Ts2"),  # Condición 3: Tipo de suelo arenoso
         Fact(precipitacion_anual=P(lambda x: 500 <= x <= 4000)),  # Condición 4: Precipitación entre 500 y 4000 mm
-        Fact(proposito_cultivo="Pc2")  # Condición 5: Propósito venta local
+        Fact(proposito_cultivo="Pc2"),  # Condición 5: Propósito venta local
+        Fact(temperatura_prom="Tp1")  # Condición 6: Temperatura promedio
+    
     )
     def recomendacion_venta_local(self):
         print("¡La regla 3 se ha activado!")
@@ -62,7 +67,9 @@ class SistemaExperto(KnowledgeEngine):
         Fact(piso_termico="Pt2"),  # Condición 2: Piso térmico templado
         Fact(tipo_suelo="Ts4"),  # Condición 3: Tipo de suelo franco
         Fact(precipitacion_anual=P(lambda x: 500 <= x <= 4000)),  # Condición 4: Precipitación entre 500 y 4000 mm
-        Fact(proposito_cultivo="Pc1")  # Condición 5: Propósito consumo personal
+        Fact(proposito_cultivo="Pc1"),  # Condición 5: Propósito consumo personal
+        Fact(temperatura_prom="Tp2")  # Condición 6: Temperatura promedio
+    
     )
     def recomendacion_consumo_personal_pt2(self):
         print("¡La regla 4 se ha activado!")
@@ -79,7 +86,9 @@ class SistemaExperto(KnowledgeEngine):
         Fact(piso_termico="Pt1"),  # Condición 2: Piso térmico cálido
         Fact(tipo_suelo="Ts2"),  # Condición 3: Tipo de suelo arenoso
         Fact(precipitacion_anual=P(lambda x: 0 <= x <= 750)),  # Condición 4: Precipitación entre 0 y 750 mm
-        Fact(proposito_cultivo="Pc1")  # Condición 5: Propósito consumo personal
+        Fact(proposito_cultivo="Pc1"),  # Condición 5: Propósito consumo personal
+        Fact(temperatura_prom="Tp1")  # Condición 6: Temperatura promedio
+    
     )
     def recomendacion_insular_consumo_personal(self):
         print("¡La regla 5 se ha activado!")
@@ -96,7 +105,9 @@ class SistemaExperto(KnowledgeEngine):
         Fact(piso_termico="Pt1"),  # Condición 2: Piso térmico cálido
         Fact(tipo_suelo="Ts4"),  # Condición 3: Tipo de suelo franco
         Fact(precipitacion_anual=P(lambda x: 0 <= x <= 750)),  # Condición 4: Precipitación entre 0 y 750 mm
-        Fact(proposito_cultivo="Pc2")  # Condición 5: Propósito venta local
+        Fact(proposito_cultivo="Pc2"),  # Condición 5: Propósito venta local
+        Fact(temperatura_prom="Tp1")  # Condición 6: Temperatura promedio
+    
     )
     def recomendacion_insular_venta_local(self):
         print("¡La regla 6 se ha activado!")
@@ -113,7 +124,9 @@ class SistemaExperto(KnowledgeEngine):
         Fact(piso_termico="Pt2"),  # Condición 2: Piso térmico templado
         Fact(tipo_suelo="Ts4"),  # Condición 3: Tipo de suelo franco
         Fact(precipitacion_anual=P(lambda x: 0 <= x <= 750)),  # Condición 4: Precipitación entre 0 y 750 mm
-        Fact(proposito_cultivo="Pc1")  # Condición 5: Propósito consumo personal
+        Fact(proposito_cultivo="Pc1"),  # Condición 5: Propósito consumo personal
+        Fact(temperatura_prom="Tp2")  # Condición 6: Temperatura promedio
+    
     )
     def recomendacion_insular_consumo_personal_pt2(self):
         print("¡La regla 7 se ha activado!")
@@ -130,7 +143,8 @@ class SistemaExperto(KnowledgeEngine):
         Fact(piso_termico="Pt1"),  # Condición 2: Piso térmico cálido
         Fact(tipo_suelo="Ts1"),  # Condición 3: Tipo de suelo arcilloso
         Fact(precipitacion_anual=P(lambda x: x > 12700)),  # Condición 4: Precipitación mayor a 12700 mm
-        Fact(proposito_cultivo="Pc1")  # Condición 5: Propósito consumo personal
+        Fact(proposito_cultivo="Pc1"),  # Condición 5: Propósito consumo personal
+        Fact(temperatura_prom="Tp1")  # Condición 6: Temperatura promedio
     )
     def recomendacion_pacifico_consumo_personal(self):
         print("¡La regla 8 se ha activado!")
@@ -147,7 +161,8 @@ class SistemaExperto(KnowledgeEngine):
         Fact(piso_termico="Pt1"),  # Condición 2: Piso térmico cálido
         Fact(tipo_suelo="Ts4"),  # Condición 3: Tipo de suelo franco
         Fact(precipitacion_anual=P(lambda x: x > 12700)),  # Condición 4: Precipitación mayor a 12700 mm
-        Fact(proposito_cultivo="Pc3")  # Condición 5: Propósito exportación
+        Fact(proposito_cultivo="Pc3"),  # Condición 5: Propósito exportación
+        Fact(temperatura_prom="Tp1")  # Condición 6: Temperatura promedio
     )
     def recomendacion_pacifico_exportacion(self):
         print("¡La regla 9 se ha activado!")
@@ -164,7 +179,8 @@ class SistemaExperto(KnowledgeEngine):
         Fact(piso_termico="Pt2"),  # Condición 2: Piso térmico templado
         Fact(tipo_suelo="Ts4"),  # Condición 3: Tipo de suelo franco
         Fact(precipitacion_anual=P(lambda x: x > 12700)),  # Condición 4: Precipitación mayor a 12700 mm
-        Fact(proposito_cultivo="Pc2")  # Condición 5: Propósito venta local
+        Fact(proposito_cultivo="Pc2"),  # Condición 5: Propósito venta local
+        Fact(temperatura_prom="Tp2")  # Condición 6: Temperatura promedio
     )
     def recomendacion_pacifico_venta_local(self):
         print("¡La regla 10 se ha activado!")
@@ -182,7 +198,9 @@ class SistemaExperto(KnowledgeEngine):
         Fact(piso_termico="Pt1"),  # Condición 2: Piso térmico cálido
         Fact(tipo_suelo="Ts4"),  # Condición 3: Tipo de suelo franco
         Fact(precipitacion_anual=P(lambda x: 500 <= x <= 7000)),  # Condición 4: Precipitación entre 500 y 7000 mm
-        Fact(proposito_cultivo="Pc1")  # Condición 5: Propósito consumo personal
+        Fact(proposito_cultivo="Pc1"),  # Condición 5: Propósito consumo personal
+        Fact(temperatura_prom="Tp1")  # Condición 6: Temperatura promedio
+    
     )
     def recomendacion_andina_consumo_personal(self):
         print("¡La regla 11 se ha activado!")
@@ -200,7 +218,9 @@ class SistemaExperto(KnowledgeEngine):
         Fact(piso_termico="Pt1"),  # Condición 2: Piso térmico cálido
         Fact(tipo_suelo="Ts1"),  # Condición 3: Tipo de suelo arcilloso
         Fact(precipitacion_anual=P(lambda x: 500 <= x <= 7000)),  # Condición 4: Precipitación entre 500 y 7000 mm
-        Fact(proposito_cultivo="Pc3")  # Condición 5: Propósito exportación
+        Fact(proposito_cultivo="Pc3"),  # Condición 5: Propósito exportación
+        Fact(temperatura_prom="Tp1")  # Condición 6: Temperatura promedio
+    
     )
     def recomendacion_andina_exportacion(self):
         print("¡La regla 12 se ha activado!")
@@ -217,7 +237,9 @@ class SistemaExperto(KnowledgeEngine):
         Fact(piso_termico="Pt2"),  # Condición 2: Piso térmico templado
         Fact(tipo_suelo="Ts4"),  # Condición 3: Tipo de suelo franco
         Fact(precipitacion_anual=P(lambda x: 500 <= x <= 7000)),  # Condición 4: Precipitación entre 500 y 7000 mm
-        Fact(proposito_cultivo="Pc1")  # Condición 5: Propósito consumo personal
+        Fact(proposito_cultivo="Pc1"),  # Condición 5: Propósito consumo personal
+        Fact(temperatura_prom="Tp2")  # Condición 6: Temperatura promedio
+    
     )
     def recomendacion_andina_consumo_personal_pt2(self):
         print("¡La regla 13 se ha activado!")
@@ -235,7 +257,9 @@ class SistemaExperto(KnowledgeEngine):
         Fact(piso_termico="Pt2"),  # Condición 2: Piso térmico templado
         Fact(tipo_suelo="Ts3"),  # Condición 3: Tipo de suelo limoso
         Fact(precipitacion_anual=P(lambda x: 500 <= x <= 7000)),  # Condición 4: Precipitación entre 500 y 7000 mm
-        Fact(proposito_cultivo="Pc3")  # Condición 5: Propósito exportación
+        Fact(proposito_cultivo="Pc3"),  # Condición 5: Propósito exportación
+        Fact(temperatura_prom="Tp2")  # Condición 6: Temperatura promedio
+    
     )
     def recomendacion_andina_exportacion_pt2(self):
         print("¡La regla 14 se ha activado!")
@@ -252,7 +276,9 @@ class SistemaExperto(KnowledgeEngine):
         Fact(piso_termico="Pt3"),  # Condición 2: Piso térmico frío
         Fact(tipo_suelo="Ts4"),  # Condición 3: Tipo de suelo franco
         Fact(precipitacion_anual=P(lambda x: 500 <= x <= 7000)),  # Condición 4: Precipitación entre 500 y 7000 mm
-        Fact(proposito_cultivo="Pc1")  # Condición 5: Propósito consumo personal
+        Fact(proposito_cultivo="Pc1"),  # Condición 5: Propósito consumo personal
+        Fact(temperatura_prom="Tp3")  # Condición 6: Temperatura promedio
+    
     )
     def recomendacion_andina_consumo_personal_pt3(self):
         print("¡La regla 15 se ha activado!")
@@ -269,7 +295,9 @@ class SistemaExperto(KnowledgeEngine):
         Fact(piso_termico="Pt4"),  # Condición 2: Piso térmico páramo
         Fact(tipo_suelo="Ts4"),  # Condición 3: Tipo de suelo franco
         Fact(precipitacion_anual=P(lambda x: 500 <= x <= 7000)),  # Condición 4: Precipitación entre 500 y 7000 mm
-        Fact(proposito_cultivo="Pc1")  # Condición 5: Propósito consumo personal
+        Fact(proposito_cultivo="Pc1"),  # Condición 5: Propósito consumo personal
+        Fact(temperatura_prom="Tp4")  # Condición 6: Temperatura promedio
+    
     )
     def recomendacion_andina_consumo_personal_pt4(self):
         print("¡La regla 16 se ha activado!")
@@ -286,7 +314,9 @@ class SistemaExperto(KnowledgeEngine):
         Fact(piso_termico="Pt1"),  # Condición 2: Piso térmico cálido
         Fact(tipo_suelo="Ts2"),  # Condición 3: Tipo de suelo arenoso
         Fact(precipitacion_anual=P(lambda x: 250 <= x <= 1500)),  # Condición 4: Precipitación entre 250 y 1500 mm
-        Fact(proposito_cultivo="Pc1")  # Condición 5: Propósito consumo personal
+        Fact(proposito_cultivo="Pc1"),  # Condición 5: Propósito consumo personal
+        Fact(temperatura_prom="Tp1")  # Condición 6: Temperatura promedio
+    
     )
     def recomendacion_orinoquia_consumo_personal(self):
         print("¡La regla 17 se ha activado!")
@@ -304,7 +334,9 @@ class SistemaExperto(KnowledgeEngine):
         Fact(piso_termico="Pt1"),  # Condición 2: Piso térmico cálido
         Fact(tipo_suelo="Ts4"),  # Condición 3: Tipo de suelo franco
         Fact(precipitacion_anual=P(lambda x: 250 <= x <= 1500)),  # Condición 4: Precipitación entre 250 y 1500 mm
-        Fact(proposito_cultivo="Pc2")  # Condición 5: Propósito venta local
+        Fact(proposito_cultivo="Pc2"),  # Condición 5: Propósito venta local
+        Fact(temperatura_prom="Tp1")  # Condición 6: Temperatura promedio
+    
     )
     def recomendacion_orinoquia_venta_local(self):
         print("¡La regla 18 se ha activado!")
@@ -321,7 +353,9 @@ class SistemaExperto(KnowledgeEngine):
         Fact(piso_termico="Pt1"),  # Condición 2: Piso térmico cálido
         Fact(tipo_suelo="Ts1"),  # Condición 3: Tipo de suelo arcilloso
         Fact(precipitacion_anual=P(lambda x: 1000 <= x <= 1500)),  # Condición 4: Precipitación entre 1000 y 1500 mm
-        Fact(proposito_cultivo="Pc1")  # Condición 5: Propósito consumo personal
+        Fact(proposito_cultivo="Pc1"),  # Condición 5: Propósito consumo personal
+        Fact(temperatura_prom="Tp1")  # Condición 6: Temperatura promedio
+    
     )
     def recomendacion_amazonica_consumo_personal(self):
         print("¡La regla 19 se ha activado!")
@@ -339,7 +373,9 @@ class SistemaExperto(KnowledgeEngine):
         Fact(piso_termico="Pt1"),  # Condición 2: Piso térmico cálido
         Fact(tipo_suelo="Ts4"),  # Condición 3: Tipo de suelo franco
         Fact(precipitacion_anual=P(lambda x: 1000 <= x <= 1500)),  # Condición 4: Precipitación entre 1000 y 1500 mm
-        Fact(proposito_cultivo="Pc3")  # Condición 5: Propósito exportación
+        Fact(proposito_cultivo="Pc3"),  # Condición 5: Propósito exportación
+        Fact(temperatura_prom="Tp1")  # Condición 6: Temperatura promedio
+    
     )
     def recomendacion_amazonica_exportacion(self):
         print("¡La regla 20 se ha activado!")
@@ -363,6 +399,8 @@ def obtener_recomendacion():
         tipo_suelo = datos.get('tipo_suelo')
         precipitacion_anual = int(datos.get('precipitacion_anual'))
         proposito_cultivo = datos.get('proposito_cultivo')
+        temperatura_prom = datos.get('temperatura_prom')
+        
         # Validar que todos los datos necesarios estén presentes
         if not all([region, piso_termico, tipo_suelo, proposito_cultivo]):
             return jsonify({"error": "Faltan datos requeridos"}), 400
@@ -375,7 +413,8 @@ def obtener_recomendacion():
             Fact(piso_termico=piso_termico),
             Fact(tipo_suelo=tipo_suelo),
             Fact(precipitacion_anual=precipitacion_anual),
-            Fact(proposito_cultivo=proposito_cultivo)
+            Fact(proposito_cultivo=proposito_cultivo),
+            Fact(temperatura_prom=temperatura_prom)
         )
         # Ejecutar el motor de inferencia
         motor.run()
@@ -393,7 +432,8 @@ def obtener_recomendacion():
                     "piso_termico": piso_termico,
                     "tipo_suelo": tipo_suelo,
                     "precipitacion_anual": precipitacion_anual,
-                    "proposito_cultivo": proposito_cultivo
+                    "proposito_cultivo": proposito_cultivo,
+                    "temperatura_prom": temperatura_prom
                 },
                 "cultivos_recomendados": recomendaciones
             })
